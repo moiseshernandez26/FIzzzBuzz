@@ -24,7 +24,7 @@ describe("Suit test for ExplorerService", () => {
   test("5) Valor de score no es un numero", () => {
     const explorer = { name: "Explorer 1", score: "a" };
     const res = FizzbuzzService.applyValidationInExplorer(explorer);
-    expect(res.trick).toBe("a");
+    expect(res.trick).not.toBe("a");
   });
   test("6) Validar con un explorer vacio", () => {
     const explorer = {};
