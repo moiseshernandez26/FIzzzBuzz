@@ -133,4 +133,9 @@ describe("Suit test for ExplorerController", () => {
         const res = ExplorerController.getExplorersUsernamesByMission("java");
         expect(res).toEqual(expectedRes);
     });
+    
+    test("4) getFizz", () => {
+        const res = ExplorerController.getFizz(9);
+        expect(res).toMatch("FIZZ");
+    });
 });
