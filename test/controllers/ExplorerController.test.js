@@ -138,4 +138,9 @@ describe("Suit test for ExplorerController", () => {
         const res = ExplorerController.getFizz(9);
         expect(res).toMatch("FIZZ");
     });
+
+    test("5) Get Stack By Name", () => {
+        const explorers = ExplorerController.getExplorersByStack("javascript");
+        expect(explorers.length).toBeGreaterThanOrEqual(10);
+    });
 });
