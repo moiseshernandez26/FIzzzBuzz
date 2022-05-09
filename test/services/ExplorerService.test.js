@@ -19,4 +19,9 @@ describe("Suit test for ExplorerService", () => {
         );
         expect(res.length).toBe(10);
     });
+
+    test("4) Test Services By Name", () => {
+        const explorers = Reader.readJsonFile("./explorers.json");
+        expect(ExplorerService.getExplorersByStack(explorers,"javascript").length).toBe(11);
+    });
 });
